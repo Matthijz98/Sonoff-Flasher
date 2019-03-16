@@ -10,10 +10,12 @@ python_version = str(sys.version_info[0]) + "." + str(sys.version_info[1]) + "."
 
 
 def check_file_exists(filename):
+    # return true if file exists in the data folder
     return os.path.isfile(os.getcwd() + "/data/" + filename)
 
 
 def download_firmware(url):
+    # use wget to download file to the data folde
     wget.download(url, os.getcwd() + "/data/")
 
 
@@ -35,7 +37,7 @@ def print_header(title):
             print(" ", end="")
             x += 1
 
-    # this funtion is probaly not needed but why not
+    # this function is probably not needed but why not
     def calc():
         return int((witdh - len(title) - 2) / 2)
 
@@ -52,10 +54,11 @@ def start_screen():
     print("\t \t Made by: Matthijz98")
     print("\t \t Python version: " + str(python_version))
     print("\t \t esptool.py version: ")
-    #print("\t \t COM PORTS detected: " + str(getComPorts()))
+    print("\t \t COM PORTS detected: " + str(get_com_ports()))
 
 
 def clear_screen():
+    # clear the screen depending on the platform
     if sys.platform.startswith('win'):
         os.system('cls')
     if sys.platform.startswith('linux') or sys.platform.startswith('cygwin'):
@@ -132,7 +135,6 @@ def get_firmware_version_option(filmware):
     for version in filmware["versions"]:
         print("[" + str(x) + "]" + version["name"] + " ")
         x += 1
-
     return filmware["versions"][int(input("Version:"))]
 
 
