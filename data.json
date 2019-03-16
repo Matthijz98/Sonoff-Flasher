@@ -5,6 +5,9 @@
       "version": "6.4.1",
       "description": "Alternative firmware for ESP8266 based devices like iTead Sonoff with web UI, rules and timers, OTA updates, custome device templates and sensors support. Allows control over MQTT, HTTP, Serial and KNX for integrations with smart home systems. Written for Arduino IDE and PlatformIO.",
       "repo": "arendst/Sonoff-Tasmota",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "license": "",
       "versions": [
         {"name": "sonoff-AR","bin": [{"file": "sonoff-AR.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-AR.bin"}]},
         {"name": "sonoff-basic","bin": [{"file": "sonoff-basic.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-basic.bin"}]},
@@ -36,9 +39,12 @@
       ]
     },{
       "name": "RavenCore",
-      "version": "6.4.1",
+      "version": "0.7.2",
       "description": "Works to bring Apple HomeKit to several devices based on an ESP8266 chip.\n            This project uses the Apple HomeKit accessory server library ESP-HomeKit from @MaximKulkin for ESP-OPEN-RTOS. And it uses the OTA update system Life-Cycle-Manager (LCM) from @HomeACessoryKid.\n            Although already forbidden by the sources and subsequent licensing, it is not allowed to use or distribute this software for a commercial purpose.",
-      "repo": "",
+      "repo": "RavenSystem/esp-homekit-devices",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "license": "",
       "versions": [
         {"name": "Sonoff.bin"},
         {"name":  "sonoff-sensors.bin"}
@@ -47,7 +53,10 @@
       "name": "Sonoff Homekit",
       "version": "Dec 29, 2018",
       "description": "Unlike other projects on github, this firmware does NOT require anything else in order to work. It is not based on the Tasmota Fw, you don't need HomeBridge running on a Raspberry-Pi or an MQTT server, since HomeKit runs natively are enough a Wi-Fi connection and an Apple Device!",
-      "repo": "",
+      "repo": "Gruppio/Sonoff-Homekit",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "license": "",
       "versions": [
         {
           "name":  "power state ON",
