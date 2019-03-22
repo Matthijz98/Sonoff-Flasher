@@ -4,6 +4,7 @@ import glob
 import serial
 import json
 import wget
+import updater
 
 version = "0.0.0 alpha"
 python_version = str(sys.version_info[0]) + "." + str(sys.version_info[1]) + "." + str(sys.version_info[1])
@@ -127,8 +128,19 @@ def show_and_get_options(options):
 
 
 def update():
-    print("In development")
-
+    clear_screen()
+    print_header("Updater")
+    print("This updater will update all the data in the data.json file using the Github api."
+          "\nIMPORTANT NOTE: The open Github API has a limmit request of 60 request in a hour. "
+          "\nThis updater requires less than that but please don't run this plugin multiple times in a hour"
+          "\nIf you have custom changes made to the data.json make sure to backup them before proceeding")
+    option = show_and_get_options(["next", "back"])
+    clear_screen()
+    if option == 0:
+        print_header("Updater is running please wait")
+        updater.update()
+    elif option== 1:
+        print("going back")
 
 def get_firmware_version_option(filmware):
     x = 0
@@ -181,31 +193,33 @@ def wizzard(filmware):
         if step == 4:
             clear_screen()
             print_header("Finished")
+            input("pres any key to exit")
             done = True
 
 
 if __name__ == '__main__':
-    clear_screen()
-    start_screen()
-    x = show_and_get_options(["Start", "Update", "Quit"])
-    if x == 0:
-        filmware = None
-        while filmware != 0:
-            clear_screen()
-            filmware = get_firmware_option()
-            clear_screen()
-            show_firmware_details(filmware)
-            x = show_and_get_options(["Choose", "View Github", "Go back"])
-            if x == 0:
-                wizzard(filmware)
-                break
-            if x == 1:
-                print()
-                break
-            if x == 2:
-                print("back")
-    if x == 1:
-        update()
-    if x == 2:
-        sys.exit()
+    while True:
+        clear_screen()
+        start_screen()
+        x = show_and_get_options(["Start", "Update", "Quit"])
+        if x == 0:
+            filmware = None
+            while filmware != 0:
+                clear_screen()
+                filmware = get_firmware_option()
+                clear_screen()
+                show_firmware_details(filmware)
+                x = show_and_get_options(["Choose", "View Github", "Go back"])
+                if x == 0:
+                    wizzard(filmware)
+                    break
+                if x == 1:
+                    print()
+                    break
+                if x == 2:
+                    print("back")
+        if x == 1:
+            update()
+        if x == 2:
+            sys.exit()
 

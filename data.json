@@ -8,6 +8,10 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "license": "",
+      "updated_at": "",
+      "update_settings": {
+        "type": "release"
+      },
       "versions": [
         {"name": "sonoff-AR","bin": [{"file": "sonoff-AR.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-AR.bin"}]},
         {"name": "sonoff-basic","bin": [{"file": "sonoff-basic.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-basic.bin"}]},
@@ -45,6 +49,11 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "license": "",
+      "updated_at": "",
+      "update_settings": {
+        "type": "repo",
+        "repo_path": "/img"
+      },
       "versions": [
         {"name": "Sonoff.bin"},
         {"name":  "sonoff-sensors.bin"}
@@ -57,6 +66,11 @@
       "stargazers_count": 0,
       "forks_count": 0,
       "license": "",
+      "updated_at": "",
+      "update_settings": {
+        "type": "repo",
+        "repo_path": "firmware/"
+      },
       "versions": [
         {
           "name":  "power state ON",
