@@ -1,6 +1,8 @@
 # Sonoff-Flasher
 The easy way to flash your Sonoff devices 
-This project is in the workings and does not work yet
+
+⚠ This project is in the workings and does not work yet ⚠
+
 But if you want you can have a look at the code and open a ticket if you want to give your oppion about something
 
 Sonoff-Flasher is A tool designed to make is supper easy to flash your Sonoff(like) devices. By helping you selecting the right version and making sure you have the most up to date version of that firmware.
@@ -17,24 +19,27 @@ python flash.py
 * Sonoff Homekit
 * RavenCore(work in progress)
 
-# planned development
+# 📅 Planned development
+* Checking of board is compatible (not sure if this is a option)
 * Remake the gui in curses
-* Build a updater for the data en the program it self
+* Build a updater for the data en the program it self (work in progress)
+* Github api OAuth2 support 
 * Make better integration with esptool.py
 * Configurator for modules after flashing
 ## Know limitations
+* Github api 60 request limit
 * Serial detection is supper buggy
-* If esptool.py fails the program will fail 
+* If esptool.py fails the program will fail
 
-# 💖Support this project💖
+# 💖 Support this project 💖
 ## Help improve the program
 Is there something you think can be better please feel free to improve it and create a pull request.
 If you don't have programming skills there is still a lot you can do. I am a native Dutch🇳🇱 speaker so my English is not perfect. So there are probably some spelling mistakes so if you find one feel free to correct me.
-## Buy me a coffee ☕
+## ☕ Buy me a coffee
 <a href="https://www.buymeacoffee.com/Matthijz98" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 When you buy me a ☕ you will get my personal Telegram for getting personal support(no guarantees for that I can fix you problem).
-## Use one of my affiliate link
-If you buy your products using the links below I get small percentage of your order(and than I can buy more Sonoff products).
+## 🛒 Use one of the affiliate links
+If you buy your products using the links below I get small percentage of your order(and than I can buy more Sonoff products)😍.
 
 | product       | Gearbest                                                                                        | Aliexpress                                                                                                                                                           | Banggood                                               |
 |---------------|-------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------|
