@@ -37,6 +37,7 @@ Is there something you think can be better please feel free to improve it and cr
 If you don't have programming skills there is still a lot you can do. I am a native Dutch🇳🇱 speaker so my English is not perfect. So there are probably some spelling mistakes so if you find one feel free to correct me.
 ## ☕ Buy me a coffee
 <a href="https://www.buymeacoffee.com/Matthijz98" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+
 When you buy me a ☕ you will get my personal Telegram for getting personal support(no guarantees for that I can fix you problem).
 ## 🛒 Use one of the affiliate links
 If you buy your products using the links below I get small percentage of your order(and than I can buy more Sonoff products)😍.

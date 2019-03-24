@@ -1,0 +1,94 @@
+{
+  "firmware":[
+    {
+      "name": "Tasmota",
+      "version": "6.4.1",
+      "description": "Alternative firmware for ESP8266 based devices like iTead Sonoff with web UI, rules and timers, OTA updates, custome device templates and sensors support. Allows control over MQTT, HTTP, Serial and KNX for integrations with smart home systems. Written for Arduino IDE and PlatformIO.",
+      "repo": "arendst/Sonoff-Tasmota",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "license": "",
+      "updated_at": "",
+      "update_settings": {
+        "type": "release"
+      },
+      "versions": [
+        {"name": "sonoff-AR","bin": [{"file": "sonoff-AR.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-AR.bin"}]},
+        {"name": "sonoff-basic","bin": [{"file": "sonoff-basic.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-basic.bin"}]},
+        {"name": "sonoff-BG","bin": [{"file": "sonoff-BG.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-BG.bin"}]},
+        {"name": "sonoff-BR","bin": [{"file": "sonoff-BR.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-BR.bin"}]},
+        {"name": "sonoff-classic","bin": [{"file": "sonoff-classic.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-classic.bin"}]},
+        {"name": "sonoff-CN","bin": [{"file": "sonoff-CN.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-CN.bin"}]},
+        {"name": "sonoff-CZ","bin": [{"file": "sonoff-CZ.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-CZ.bin"}]},
+        {"name": "sonoff-DE","bin": [{"file": "sonoff-DE.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-DE.bin"}]},
+        {"name": "sonoff-display","bin": [{"file": "sonoff-display.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-display.bin"}]},
+        {"name": "sonoff-FR","bin": [{"file": "sonoff-FR.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-FR.bin"}]},
+        {"name": "sonoff-GR","bin": [{"file": "sonoff-GR.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-GR.bin"}]},
+        {"name": "sonoff-HE","bin": [{"file": "sonoff-HE.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-HE.bin"}]},
+        {"name": "sonoff-HU","bin": [{"file": "sonoff-HU.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-HU.bin"}]},
+        {"name": "sonoff-IT","bin": [{"file": "sonoff-IT.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-IT.bin"}]},
+        {"name": "sonoff-knx","bin": [{"file": "sonoff-knx.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-knx.bin"}]},
+        {"name": "sonoff-minimal","bin": [{"file": "sonoff-minimal.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-minimal.bin"}]},
+        {"name": "sonoff-NL","bin": [{"file": "sonoff-NL.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-NL.bin"}]},
+        {"name": "sonoff-PL","bin": [{"file": "sonoff-PL.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-PL.bin"}]},
+        {"name": "sonoff-PT","bin": [{"file": "sonoff-PT.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-PT.bin"}]},
+        {"name": "sonoff-RU","bin": [{"file": "sonoff-RU.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-RU.bin"}]},
+        {"name": "sonoff-SE","bin": [{"file": "sonoff-SE.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-SE.bin"}]},
+        {"name": "sonoff-sensors","bin": [{"file": "sonoff-sensors.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-sensors.bin"}]},
+        {"name": "sonoff-SK","bin": [{"file": "sonoff-SK.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-SK.bin"}]},
+        {"name": "sonoff-TR","bin": [{"file": "sonoff-TR.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-TR.bin"}]},
+        {"name": "sonoff-TW","bin": [{"file": "sonoff-TW.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-TW.bin"}]},
+        {"name": "sonoff-UK","bin": [{"file": "sonoff-UK.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff-UK.bin"}]},
+        {"name": "sonoff","bin": [{"file": "sonoff.bin", "ofset": "", "download": "https://github.com/arendst/Sonoff-Tasmota/releases/download/v6.4.1/sonoff.bin"}]}
+      ]
+    },{
+      "name": "RavenCore",
+      "version": "0.7.2",
+      "description": "Works to bring Apple HomeKit to several devices based on an ESP8266 chip.\n            This project uses the Apple HomeKit accessory server library ESP-HomeKit from @MaximKulkin for ESP-OPEN-RTOS. And it uses the OTA update system Life-Cycle-Manager (LCM) from @HomeACessoryKid.\n            Although already forbidden by the sources and subsequent licensing, it is not allowed to use or distribute this software for a commercial purpose.",
+      "repo": "RavenSystem/esp-homekit-devices",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "license": "",
+      "updated_at": "",
+      "update_settings": {
+        "type": "repo",
+        "repo_path": "/img"
+      },
+      "versions": [
+        {"name": "Sonoff.bin"},
+        {"name":  "sonoff-sensors.bin"}
+      ]
+    },{
+      "name": "Sonoff Homekit",
+      "version": "Dec 29, 2018",
+      "description": "Unlike other projects on github, this firmware does NOT require anything else in order to work. It is not based on the Tasmota Fw, you don't need HomeBridge running on a Raspberry-Pi or an MQTT server, since HomeKit runs natively are enough a Wi-Fi connection and an Apple Device!",
+      "repo": "Gruppio/Sonoff-Homekit",
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "license": "",
+      "updated_at": "",
+      "update_settings": {
+        "type": "repo",
+        "repo_path": "firmware/"
+      },
+      "versions": [
+        {
+          "name":  "power state ON",
+          "bin": [
+            {"file": "rboot.bin", "ofset": "0x0 "},
+            {"file": "blank_config.bin", "ofset": "0x1000"},
+            {"file": "Sonoff_ON.bin", "ofset": "0x2000"}
+          ]
+        },
+        {
+          "name":  "power state OFF",
+          "bin": [
+            {"file": "rboot.bin", "ofset": "0x0 "},
+            {"file": "blank_config.bin", "ofset": "0x1000"},
+            {"file": "Sonoff_OFF.bin", "ofset": "0x2000"}
+          ]
+        }
+      ]
+    }
+  ]
+}

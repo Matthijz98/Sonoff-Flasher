@@ -5,9 +5,15 @@ import serial
 import json
 import wget
 import updater
+import esptool
 
 version = "0.0.0 alpha"
 python_version = str(sys.version_info[0]) + "." + str(sys.version_info[1]) + "." + str(sys.version_info[1])
+com_port = "COM4"
+
+
+def check_if_connected():
+    serial.Serial(com_port)
 
 
 def check_file_exists(filename):
@@ -22,7 +28,7 @@ def download_firmware(url):
 
 def print_header(title):
     # the witdh of the header
-    witdh = 55
+    witdh = 51
 
     # small funtion to make a line of '*'
     def line():
@@ -40,11 +46,15 @@ def print_header(title):
 
     # this function is probably not needed but why not
     def calc():
-        return int((witdh - len(title) - 2) / 2)
+        x = int((witdh - len(title) - 2) / 2)
+        return x
 
     # make the header
+    calced = calc()
+    if calced + calced + len(title) < witdh:
+        witdh += 1
     line()
-    print("\n*", end=""), space(calc()), print(title, end=""), space(calc()), print("*")
+    print("\n*", end=""), space(calced), print(title, end=""), space(calced), print("*")
     line()
     print()
 
@@ -104,6 +114,10 @@ def show_firmware_details(filmware):
     print("Version: " + filmware["version"])
     print("Github URL: https://github.com/" + filmware["repo"])
     print("Description: " + filmware["description"])
+    print("Stargazers: " + filmware["stargazers_count"])
+    print("Forks: " + filmware["forks_count"])
+    print("license: " + filmware["license"])
+    print("Watchers: " + filmware["watchers"])
     print("Verions:")
     for version in filmware['versions']:
         print("\t" + version['name'])
@@ -112,6 +126,13 @@ def show_firmware_details(filmware):
 def get_json():
     with open("data.json", "r") as read_file:
         return json.load(read_file)["firmware"]
+
+
+def clear_flash():
+    try:
+        os.system("esptool.py --port "+com_port+" erase_flash")
+    except Exception as error:
+        print_header(error)
 
 
 def flash(version, com):
@@ -130,10 +151,10 @@ def show_and_get_options(options):
 def update():
     clear_screen()
     print_header("Updater")
-    print("This updater will update all the data in the data.json file using the Github api."
+    print("This updater will update all the data in the old_data.json file using the Github api."
           "\nIMPORTANT NOTE: The open Github API has a limmit request of 60 request in a hour. "
           "\nThis updater requires less than that but please don't run this plugin multiple times in a hour"
-          "\nIf you have custom changes made to the data.json make sure to backup them before proceeding")
+          "\nIf you have custom changes made to the old_data.json make sure to backup them before proceeding")
     option = show_and_get_options(["next", "back"])
     clear_screen()
     if option == 0:
@@ -141,6 +162,7 @@ def update():
         updater.update()
     elif option== 1:
         print("going back")
+
 
 def get_firmware_version_option(filmware):
     x = 0
@@ -188,8 +210,13 @@ def wizzard(filmware):
             step += 1
         if step == 3:
             clear_screen()
-            print_header("Let's flash that thing")
-            flash(filmware_version, "COM5")
+            print_header("Let's clear the flash")
+            clear_flash()
+            x = show_and_get_options(["next", "retry"])
+            if x == 0:
+                break
+            elif x ==1:
+                print("lets retry this")
         if step == 4:
             clear_screen()
             print_header("Finished")

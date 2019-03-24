@@ -1,10 +1,11 @@
 import urllib.request
 import json
+from shutil import move
 
 
 def get_json():
-    # get the json data from data.json
-    with open("data.json", "r") as read_file:
+    # get the json data from old_data.json
+    with open("old_data.json", "r") as read_file:
         return json.load(read_file)["firmware"]
 
 
@@ -36,15 +37,16 @@ def update_version(old_firmware):
         return version
 
     if old_firmware["name"] == "Sonoff Homekit":
+        versions = []
         # Sonoff Homekit Updater
         print("Sonoff homekit update started")
         for version in old_firmware["versions"]:
             files = []
-            versions = []
+
             for file in version["bin"]:
                 file_data = get_git_file_info(old_firmware["repo"], old_firmware["update_settings"]["repo_path"] + file["file"])
                 files.append({"file": old_firmware["name"], "ofset": file["ofset"], "download": file_data["download_url"], "sha": file_data["sha"]})
-            versions.append(files)
+            versions.append({"name": version["name"], "bin": files})
         return(versions)
 
     elif old_firmware["name"] == "RavenCore":
@@ -53,7 +55,13 @@ def update_version(old_firmware):
     else:
         print("The auto updater does not support this firmware \n Old data will be used")
 
+
+def backup_file():
+    move("data.json", "old_data.json")
+
+
 def update():
+    backup_file()
     data = get_json()
     new_data = {}
     new_data["firmware"] = []
@@ -65,15 +73,17 @@ def update():
         print("data recieved")
         new_data["firmware"].append({"name": firmware["name"],
                                      "version": firmware["version"],
-                                     "updated_at": firmware["updated_at"],
+                                     "updated_at": info["updated_at"],
+                                     "update_settings": firmware["update_settings"],
                                      "description": firmware["description"],
-                                     "repo": "arendst/Sonoff-Tasmota",
+                                     "repo": firmware["repo"],
                                      "stargazers_count": info["stargazers_count"],
                                      "forks_count": info["forks_count"],
+                                     "watchers": info["watchers"],
                                      "license": info['license']['name'],
                                      "versions": update_version(firmware)})
     print("saving changes")
-    with open('test_data.json', 'w') as outfile:
+    with open('data.json', 'w') as outfile:
         json.dump(new_data, outfile, indent=4)
     print("changes saved to data.json")
 
